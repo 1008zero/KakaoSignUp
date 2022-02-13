@@ -1,24 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KakaoSignUp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxg-35-g8i">
+                                <rect key="frame" x="95" y="431" width="224" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카카오로 로그인하기">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="KakaoLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bil-1K-0me"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aIx-Ha-rmf">
+                                <rect key="frame" x="105" y="109" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aIx-Ha-rmf" secondAttribute="height" multiplier="1:1" id="RqC-ph-DGC"/>
+                                    <constraint firstAttribute="width" constant="67" id="egd-gn-WtP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrh-jb-M0J">
+                                <rect key="frame" x="95" y="471" width="224" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카카오 로그아웃하기">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="KakaoLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSu-jD-YgD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUh-Jh-49V">
+                                <rect key="frame" x="192" y="136" width="202" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AUh-Jh-49V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="FoY-mu-doB"/>
+                            <constraint firstItem="aIx-Ha-rmf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="IwV-iC-eXH"/>
+                            <constraint firstItem="aIx-Ha-rmf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="JJ3-QC-1Gn"/>
+                            <constraint firstItem="xxg-35-g8i" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WOY-bv-iN3"/>
+                            <constraint firstItem="AUh-Jh-49V" firstAttribute="leading" secondItem="aIx-Ha-rmf" secondAttribute="trailing" constant="20" id="ZjL-8F-xJa"/>
+                            <constraint firstItem="Rrh-jb-M0J" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ckH-Nu-O9s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AUh-Jh-49V" secondAttribute="trailing" constant="20" id="tJh-Cd-j3q"/>
+                            <constraint firstItem="xxg-35-g8i" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="xnL-sy-5Q9"/>
+                            <constraint firstItem="Rrh-jb-M0J" firstAttribute="firstBaseline" secondItem="xxg-35-g8i" secondAttribute="baseline" constant="40" id="zVg-nX-Cpn"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="xxg-35-g8i" id="sMB-aK-TF4"/>
+                        <outlet property="logoutBtn" destination="Rrh-jb-M0J" id="WZo-J5-hg4"/>
+                        <outlet property="profileImage" destination="aIx-Ha-rmf" id="q8H-QZ-miB"/>
+                        <outlet property="profileName" destination="AUh-Jh-49V" id="sAr-y3-CIZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="104.46428571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
